@@ -1,0 +1,6 @@
+{
+  "name": "PDF Viewer Pro",
+  "description": "A web application to upload and view PDF files directly in the browser with a sleek, modern interface.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

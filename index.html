@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer Pro - Annotate & Save</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #2d3748; /* dark-gray-800 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4a5568; /* dark-gray-600 */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #718096; /* dark-gray-500 */
+      }
+      html {
+        scrollbar-width: thin;
+        scrollbar-color: #4a5568 #2d3748;
+      }
+      body {
+        overscroll-behavior-y: contain; /* Prevent pull-to-refresh on mobile when interacting with canvas */
+      }
+      .annotation-text-input {
+        position: absolute;
+        border: 1px solid #cbd5e1; /* slate-300 */
+        background-color: #f8fafc; /* slate-50 */
+        color: #1e293b; /* slate-800 */
+        padding: 4px;
+        border-radius: 4px;
+        font-size: 14px; /* Adjust as needed */
+        z-index: 100;
+        min-width: 100px;
+      }
+      .color-picker-input {
+        width: 36px;
+        height: 36px;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        border-radius: 0.375rem; /* rounded-md */
+      }
+      .color-picker-input::-webkit-color-swatch-wrapper {
+        padding: 0;
+      }
+      .color-picker-input::-webkit-color-swatch {
+        border: 1px solid #4a5568; /* slate-600 */
+        border-radius: 0.375rem; /* rounded-md */
+      }
+      .color-picker-input::-moz-color-swatch {
+        border: 1px solid #4a5568; /* slate-600 */
+        border-radius: 0.375rem; /* rounded-md */
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@4.4.168",
+    "pdfjs-dist/build/pdf.worker.min.js": "https://esm.sh/pdfjs-dist@4.4.168/build/pdf.worker.min.js",
+    "pdf-lib": "https://esm.sh/pdf-lib@1.17.1",
+    "@/": "./"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-800 overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
