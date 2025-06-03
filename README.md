@@ -1,3 +1,7 @@
+日本語フォントの取り込みとかでうまくいかなかったやつ。
+WriteToPdfとして再開発済。一応アーカイブとして残しておく
+
+
 # Run and deploy your AI Studio app
 
 This contains everything you need to run your app locally.
